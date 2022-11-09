@@ -15,22 +15,15 @@ struct TextImageView: View {
                 Image(systemName: "lock.shield")
                     .font(.system(size: 16, weight: .regular))
                     .padding(14)
-                    .foregroundColor(.white)
-            } else if type == 2 {
-                Image(systemName: "photo")
-                    .resizable(true)
-                    .scaledToFit()
-                    .frame(width: 30, height: 30, alignment: .center)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(hexadecimal: "5366df"))
             } else {
                 Image(systemName: "ellipsis.bubble")
                     .font(.system(size: 16, weight: .regular))
                     .padding(14)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(hexadecimal: "5366df"))
             }
         }
-//        .frame(width: 54, height: 54, alignment: .center)
-        .background(Color(hexadecimal: "5366df"))
+        .background(Color(hexadecimal: "F1F1F1"))
         .cornerRadius(6)
     }
     

@@ -18,9 +18,8 @@ struct PicCell: View {
                     Image(systemName: "photo")
                         .font(.system(size: 16, weight: .regular))
                         .padding(14)
-                        .foregroundColor(.white)
-//                        .frame(width: 30, height: 30, alignment: .center)
-                        .background(Circle().fill(Color(hexadecimal: "5366df")))
+                        .foregroundColor(Color(hexadecimal: "5366df"))
+                        .background(Circle().fill(Color(hexadecimal: "F1F1F1")))
                 }
                 Spacer()
                 Text("\(item.pics?.count ?? 0)")
