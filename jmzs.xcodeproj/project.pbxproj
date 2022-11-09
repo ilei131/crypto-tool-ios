@@ -291,7 +291,6 @@
 				18FEEA91291A796C000D61FC /* PicView.swift */,
 				18FEEA93291A7999000D61FC /* PicListView.swift */,
 				18FEEA95291A7BF5000D61FC /* PicDetailView.swift */,
-				18FEEA97291A7E7C000D61FC /* PicViewModel.swift */,
 				18FEEA99291A872C000D61FC /* ThumbnailView.swift */,
 				18FEEAA0291A885C000D61FC /* BigPicView.swift */,
 				18FEEAB7291A9871000D61FC /* PicCell.swift */,
@@ -392,6 +391,7 @@
 		18F561DC2919D354000EA8BB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				18FEEA97291A7E7C000D61FC /* PicViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

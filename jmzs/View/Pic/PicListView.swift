@@ -43,6 +43,7 @@ struct PicListView: View {
                 }
                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 10, trailing: 20))
             }
+            .background(Color(.systemGroupedBackground))
         } else {
             EmptyView()
         }

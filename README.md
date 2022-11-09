@@ -1,8 +1,11 @@
 # crypto-tool-ios
 
-A crypto tool
+a crypto tool
 
-Main function:
-store password(encrypted by aes)
-store pictures(as binary)
-encrypt and decrypt text messages
+main function:
+
+- store password(encrypted by aes)
+
+- store pictures(as binary)
+
+- encrypt and decrypt text messages

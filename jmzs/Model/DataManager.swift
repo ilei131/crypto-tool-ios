@@ -270,16 +270,22 @@ class DataManager: ObservableObject {
     }
 
     func clearData() {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Account")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Pwd")
         let deleteAll = NSBatchDeleteRequest(fetchRequest: request)
-        let requestMsg = NSFetchRequest<NSFetchRequestResult>(entityName: "Message")
+        let requestMsg = NSFetchRequest<NSFetchRequestResult>(entityName: "Msg")
         let deleteAllMsg = NSBatchDeleteRequest(fetchRequest: requestMsg)
-        let requestBigImage = NSFetchRequest<NSFetchRequestResult>(entityName: "BigImage")
-        let deleteAllBigImage = NSBatchDeleteRequest(fetchRequest: requestBigImage)
+        let requestPic = NSFetchRequest<NSFetchRequestResult>(entityName: "Pic")
+        let deleteAllPic = NSBatchDeleteRequest(fetchRequest: requestPic)
+        let requestBigPic = NSFetchRequest<NSFetchRequestResult>(entityName: "BigPic")
+        let deleteAllBigPic = NSBatchDeleteRequest(fetchRequest: requestBigPic)
+        let requestThumb = NSFetchRequest<NSFetchRequestResult>(entityName: "Thumb")
+        let deleteAllThumb = NSBatchDeleteRequest(fetchRequest: requestThumb)
         do {
             try viewContext.execute(deleteAll)
             try viewContext.execute(deleteAllMsg)
-            try viewContext.execute(deleteAllBigImage)
+            try viewContext.execute(deleteAllPic)
+            try viewContext.execute(deleteAllBigPic)
+            try viewContext.execute(deleteAllThumb)
             clearPassword()
         } catch { print(error) }
     }

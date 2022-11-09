@@ -21,16 +21,12 @@ struct PicView: View {
                 .onCancel {
                     
                 }
-            VStack {
-                if (searchText.isEmpty) {
-                    PicListView().environment(\.managedObjectContext, self.context)
-                } else {
-                    PicListView.init(filter: searchText)
-                        .environment(\.managedObjectContext, self.context)
-                }
-                Spacer()
+            if (searchText.isEmpty) {
+                PicListView().environment(\.managedObjectContext, self.context)
+            } else {
+                PicListView.init(filter: searchText)
+                    .environment(\.managedObjectContext, self.context)
             }
-            .background(Color(.systemGroupedBackground))
         }
     }
 }
