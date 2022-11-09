@@ -1,0 +1,77 @@
+/* 
+  Localizable.strings
+  jmzs
+
+  Created by ilei on 2022/11/7.
+  
+*/
+"main_title" = "Crypto Tool";
+"new_item" = "New Item";
+"item_info" = "Item Info";
+"title" = "Title*";
+"title_placeholder" = "Title";
+"account" = "Account";
+"password" = "Password";
+"website" = "Website";
+"remarks" = "Remarks";
+"photo" = "Photo";
+"cancel" = "Cancel";
+"create" = "Create";
+"update" = "Update";
+"tip" = "Tip";
+"tip_content" = "Title cannot be empty";
+"ok" = "OK";
+"back" = "Back";
+"edit" = "Edit";
+"copy" = "Copy success";
+"Choose" = "Choose";
+"Photo Library" = "Photo Library";
+"Camera" = "Camera";
+"pwd_tip" = "Input password";
+"set_pwd" = "Set Password";
+"master_pwd" = "Master Password";
+"confirm_pwd" = "Confirm Password";
+"done" = "Done";
+"master_pwd_tip" = "Master password cannot be empty";
+"passwords_do_not_match" = "Passwords do not match";
+"remember_pwd" = "Please remember this password";
+"setup" = "Setup";
+"more" = "More";
+"reset" = "Reset";
+"score" = "Score";
+"policy" = "Privacy Policy";
+"trash" = "Clear data";
+"delete_tip" = "This will delete all data";
+"policy_content" =
+"Crypto Tool(the software) respects and protects the personal privacy of all users. When you install the software, you are deemed to agree to all the contents of the software privacy policy.\n\n1. Scope of application\na) When you install the software, you need to agree to open some permissions of smart phone;\nb) When you use the software, the software will receive and record the information you submitted, and will not record the information on your mobile phone.\n\n2. Use of information\na) The software will not provide, sell, rent, share or trade your personal information to any irrelevant third party.\n\n3. Information storage and exchange\na) The information and data created by the user using the software are saved in the software, and the password is stored in the software in encrypted form. The software will not bear any responsibility for the information disclosure caused caused by user behavior in the process of use.\n";
+"reminder" = "Reminder";
+"agree" = "Agree";
+"disagree" = "Disagree";
+"reminder_b" = "Welcome to use the Crypto Tool app. It won't connect to the Internet. All information is stored locally. All passwords are encrypted by AES. All photos are stored int the form of binary data. Please carefully read the";
+"reminder_m" = "《privacy policy》";
+"reminder_e" = "before using the Crypto Tool app. You need to agree and accept all terms before using our services.";
+"add_tip" = "Add a new item";
+"account_pwd" = "Account and Password";
+"privacy_photo" = "Important pictures";
+"launch_pwd" = "Enable Master Password";
+"letter" = "Message";
+"add_letter_tip" = "Add a new secret letter";
+"secret_text" = "Secret Text";
+"secret_photo" = "Secret Photo";
+"encrypt" = "Encrypt";
+"plaintext_cannot_be_empty" = "Plaintext cannot be empty";
+"ciphertext_cannot_be_empty" = "Ciphertext cannot be empty";
+"ciphertext_is_empty" = "Ciphertext is empty";
+"input_plaintext" = "Input the plaintext";
+"ciphertext" = "Ciphertext";
+"secret_msg" = "Secret Message";
+"plaintext" = "Plaintext";
+"copy_ciphertext" = "Paste the Ciphertext";
+"decrypt" = "Decrypt";
+"invalidate_ciphertext" = "The ciphertext format is incorrect. Please confirm that the ciphertext is generated through Crypto Tool";
+"save" = "Save";
+"app is locked" = "Crypto Tool is locked";
+"please authenticate yourself" = "Please authenticate yourself to Crypto Tool";
+"something went wrong" = "Something went wrong while authenticating. Please try again.";
+"unlock" = "Unlock";
+"enable face id" = "Enable Face ID";

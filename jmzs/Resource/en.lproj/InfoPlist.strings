@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  jmzs
+
+  Created by ilei on 2022/11/7.
+  
+*/
+"CFBundleDisplayName" = "Crypto Tool";
+"NSCameraUsageDescription" = "Camera is used to take pictures";
+"NSPhotoLibraryUsageDescription" = "Photo library is used to add pictures";
+"NSFaceIDUsageDescription" = "Face ID is used to authenticate user into app";

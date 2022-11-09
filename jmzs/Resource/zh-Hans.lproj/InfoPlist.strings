@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  jmzs
+
+  Created by ilei on 2022/11/7.
+  
+*/
+"CFBundleDisplayName" = "加密助手";
+"NSCameraUsageDescription" = "需要使用相机拍照添加图片";
+"NSPhotoLibraryUsageDescription" = "需要访问相册添加图片";
+"NSFaceIDUsageDescription" = "需要使用Face ID用于向应用程序验证用户身份";

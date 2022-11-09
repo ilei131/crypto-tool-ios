@@ -1,0 +1,78 @@
+/* 
+  Localizable.strings
+  jmzs
+
+  Created by ilei on 2022/11/7.
+  
+*/
+"main_title" = "加密助手";
+"new_item" = "新条目";
+"item_info" = "条目信息";
+"title" = "标题*";
+"title_placeholder" = "标题";
+"account" = "账号";
+"password" = "密码";
+"website" = "网站";
+"remarks" = "备注";
+"photo" = "图片";
+"cancel" = "取消";
+"create" = "创建";
+"update" = "更新";
+"tip" = "提示";
+"tip_content" = "标题不能为空";
+"ok" = "确定";
+"back" = "返回";
+"edit" = "编辑";
+"copy" = "复制成功";
+"Choose" = "选择图片";
+"Photo Library" = "从手机相册选择";
+"Camera" = "拍照";
+"pwd_tip" = "请输入密码";
+"set_pwd" = "设置密码";
+"master_pwd" = "主密码";
+"confirm_pwd" = "确认密码";
+"done" = "完成";
+"master_pwd_tip" = "主密码不能为空";
+"passwords_do_not_match" = "主密码和确认密码不一致";
+"remember_pwd" = "请牢记该密码";
+"setup" = "设置";
+"more" = "更多";
+"reset" = "重置";
+"score" = "评分";
+"policy" = "隐私政策";
+"trash" = "清除数据";
+"delete_tip" = "这将删除所有数据";
+"policy_content" =
+"加密助手App(以下称该软件)尊重并保护所有用户的个人隐私权。您安装该软件的同时，即视为同意该软件隐私政策的全部内容。\n\n1. 适用范围\na) 在您安装该软件时，需要同意开通智能手机部分权限；\nb) 在您使用本软件时，本软件会接收记录您提交的信息，不会记录您的手机上的信息。\n\n2. 信息使用\na) 该软件不会向任何无关第三方提供、出售、出租、分享或交易您的个人信息。\n\n3. 信息存储和交换\na) 用户使用该软件创建的信息和资料均保存在该软件，密码以加密形式存储在该软件，在使用过程中因为用户行为导致的信息泄露本软件不承担任何责任。\n";
+"reminder" = "温馨提示";
+"agree" = "同意";
+"disagree" = "不同意";
+"reminder_b" = "欢迎使用加密助手，在你使用的时候不会联网，所有信息均存储在本地，所有密码经AES加密存储在App，所有照片以二进制数据形式存储在App，在使用加密助手前，请认真阅读";
+"reminder_m" = "《隐私政策》";
+"reminder_e" = "，请您同意并接受全部条款后再开始使用我们的服务。";
+"add_tip" = "添加新条目";
+"account_pwd" = "账号密码";
+"privacy_photo" = "重要图片";
+"launch_pwd" = "启用主密码";
+"letter" = "密信";
+"add_letter_tip" = "创建新密信";
+"secret_text" = "文本密信";
+"secret_photo" = "图片密信";
+"encrypt" = "加密";
+"plaintext_cannot_be_empty" = "明文不能为空";
+"ciphertext_cannot_be_empty" = "密文不能为空";
+"ciphertext_is_empty" = "密文为空";
+
+"input_plaintext" = "请输入明文";
+"ciphertext" = "密文";
+"secret_msg" = "密信";
+"plaintext" = "明文";
+"copy_ciphertext" = "请粘贴密文";
+"decrypt" = "解密";
+"invalidate_ciphertext" = "密文格式不正确，请确认密文通过加密助手生成。";
+"save" = "保存";
+"app is locked" = "加密助手已锁定";
+"please authenticate yourself" = "请验证您的身份以解锁加密助手";
+"something went wrong" = "身份验证时出错，请再试一次。";
+"unlock" = "解锁";
+"enable face id" = "启用面容ID";
