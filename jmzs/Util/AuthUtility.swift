@@ -51,7 +51,7 @@ class AuthUtlity {
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply: handleReply)
             } else if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
                 context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason, reply: handleReply)
-            }else{
+            } else{
                 let error = AuthError(description: "something went wrong".localized())
                 promise(.failure(error))
             }
