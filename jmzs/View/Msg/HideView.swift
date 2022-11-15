@@ -10,24 +10,19 @@ import Foundation
 
 struct HideView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State var bundleStr: URL? = Bundle.main.url(forResource: "www_en/index", withExtension: "html")
 
-    func getCurrentLanguage() -> String {
-        let preferredLang = Bundle.main.preferredLocalizations.first! as NSString
-        switch String(describing: preferredLang) {
-        case "zh-Hans-US","zh-Hans-CN","zh-Hant-CN","zh-TW","zh-HK","zh-Hans":
-            return "cn"//中文
-        default:
-            return "en"
+    func getCurrentFile() -> String {
+        let lc = Locale.current.languageCode ?? ""
+        if lc.contains("zh") {
+            return "www_cn/index"//中文
+        } else {
+            return "www_en/index"
         }
     }
     
     var body: some View {
-        let language = getCurrentLanguage()
-        if language == "cn" {
-            bundleStr = Bundle.main.url(forResource: "www_cn/index", withExtension: "html")
-        }
-        return MyWebView(url: $bundleStr)
+        let bundleStr = Bundle.main.url(forResource: getCurrentFile(), withExtension: "html")
+        return MyWebView(url: bundleStr)
     }
     
     var cancelNavItem: some View {
