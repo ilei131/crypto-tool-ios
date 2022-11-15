@@ -48,10 +48,10 @@ struct ImagePicker: UIViewControllerRepresentable {
                 if let uiImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                     if let onSelectAction = onSelect {
                         var image = uiImage
-                        if let fixImage = getPropertyImage(uiImage) {
+                        if let fixImage = getCompressedImage(uiImage) {
                             image = fixImage
                         }
-                        var compression = 0.45
+                        var compression = 0.75
                         var data = image.jpegData(compressionQuality: compression)
                         var length = data?.count ?? 0
                         NSLog("压缩：\(compression) length:\(length)")
@@ -82,6 +82,30 @@ struct ImagePicker: UIViewControllerRepresentable {
         func getPropertyImage(_ image: UIImage) -> UIImage? {
             let maxWidth = 150.0
             let maxHeight = 300.0
+            var newImage: UIImage?
+            if 2*image.size.width < image.size.height {
+                let width = maxHeight*image.size.width/image.size.height
+                UIGraphicsBeginImageContext(CGSize.init(width: width, height: maxHeight))
+                image.draw(in: CGRect.init(x: 0, y: 0, width: width, height: maxHeight))
+                newImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext();
+            } else {
+                if image.size.width > maxWidth {
+                    let height = maxWidth*image.size.height/image.size.width
+                    UIGraphicsBeginImageContext(CGSize.init(width: maxWidth, height: height))
+                    image.draw(in: CGRect.init(x: 0, y: 0, width: maxWidth, height: height))
+                    newImage = UIGraphicsGetImageFromCurrentImageContext()
+                    UIGraphicsEndImageContext()
+                } else {
+                    newImage = image
+                }
+            }
+            return newImage
+        }
+        
+        func getCompressedImage(_ image: UIImage) -> UIImage? {
+            let maxWidth = 200.0
+            let maxHeight = 400.0
             var newImage: UIImage?
             if 2*image.size.width < image.size.height {
                 let width = maxHeight*image.size.width/image.size.height

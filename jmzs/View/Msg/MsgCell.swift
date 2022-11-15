@@ -20,7 +20,21 @@ struct MsgCell: View {
             subTitle = ctime
         }
         return HStack(spacing: 8) {
-                TextImageView(type: 3)
+                ZStack(alignment: .center) {
+                    if item.owner {
+                        Image(systemName: "ellipsis.bubble")
+                            .font(.system(size: 20, weight: .regular))
+                            .padding(12)
+                            .foregroundColor(Color(hexadecimal: "5366df"))
+                    } else {
+                        Image(systemName: "lock.open")
+                            .font(.system(size: 20, weight: .regular))
+                            .padding(12)
+                            .foregroundColor(Color(hexadecimal: "5366df"))
+                    }
+                }
+                .background(Color(hexadecimal: "F1F1F1"))
+                .cornerRadius(6)
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(alignment: .center) {
                         Text(title)

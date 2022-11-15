@@ -32,6 +32,21 @@ struct MsgDetailView: View {
                         isPresentingToast: $isPresentingToast
                     )
                 }
+                if !message.isEmpty {
+                    if (model.type == 1) {
+                        Section(header: headerView(type: 2)) {
+                            VStack() {
+                                HStack {
+                                    Text(message)
+                                }
+                                Spacer()
+                            }
+                            .minHeight(180)
+                        }
+                    } else {
+                        showPic()
+                    }
+                }
                 Section(header: headerView(type: 1)) {
                     VStack() {
                         HStack {
@@ -40,17 +55,6 @@ struct MsgDetailView: View {
                         Spacer()
                     }
                     .minHeight(180)
-                }
-                if !message.isEmpty {
-                    Section(header: headerView(type: 2)) {
-                        VStack() {
-                            HStack {
-                                Text(message)
-                            }
-                            Spacer()
-                        }
-                        .minHeight(180)
-                    }
                 }
             }
         }
@@ -72,6 +76,27 @@ struct MsgDetailView: View {
                autoDismiss: .after(1))
     }
     
+    func showPic() -> some View {
+        return Section(header: Text("ciphertext".localized())) {
+            VStack() {
+                if !message.isEmpty {
+                    if let imageData = Data.init(base64Encoded: message) {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Image(uiImage: UIImage(data:imageData)!)
+                                .renderingMode(.original)
+                                .resizable().aspectRatio(contentMode: .fit)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+                }
+            }
+            .maxHeight(200)
+        }
+    }
+    
     //1明文 2密文
     func headerView(type: Int) -> some View {
         HStack {
@@ -90,7 +115,18 @@ struct MsgDetailView: View {
                     .imageScale(.large)
                     .foregroundColor(.black)
             }
+            if type == 1, model.owner {
+                Button(action: shareAction) {
+                    Image(systemName: "square.and.arrow.up")
+                        .accentColor(.black)
+                        .imageScale(.large)
+                        .foregroundColor(.black)
+                }
+            }
         }
+        .shareSheet(items: [model.content],
+                    isPresented: $showSheet,
+                    excludedActivityTypes:nil)
     }
     
     var cipherTextNavItem: some View {
@@ -117,10 +153,8 @@ struct MsgDetailView: View {
         })
             .font(Font.body.bold())
     }
-}
-
-struct MsgDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        Text("")
+    
+    func shareAction() {
+        showSheet = true
     }
 }

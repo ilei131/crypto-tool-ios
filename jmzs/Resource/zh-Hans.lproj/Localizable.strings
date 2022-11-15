@@ -56,6 +56,7 @@
 "launch_pwd" = "启用主密码";
 "letter" = "密信";
 "add_letter_tip" = "创建新密信";
+"hide_text" = "隐藏/显示秘密";
 "secret_text" = "文本密信";
 "secret_photo" = "图片密信";
 "encrypt" = "加密";
@@ -67,6 +68,7 @@
 "ciphertext" = "密文";
 "secret_msg" = "密信";
 "plaintext" = "明文";
+"plaintext_pic" = "明文(压缩后的图片<10KB)";
 "copy_ciphertext" = "请粘贴密文";
 "decrypt" = "解密";
 "invalidate_ciphertext" = "密文格式不正确，请确认密文通过加密助手生成。";

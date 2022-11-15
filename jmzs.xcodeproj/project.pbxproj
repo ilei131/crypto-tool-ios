@@ -47,6 +47,11 @@
 		188131E22918D8EC00C26706 /* AES256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188131E12918D8EC00C26706 /* AES256.swift */; };
 		188131E42918D98F00C26706 /* MsgEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188131E32918D98F00C26706 /* MsgEntity.swift */; };
 		188131E72918DB1B00C26706 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188131E62918DB1B00C26706 /* Date.swift */; };
+		1881B5DD292228FD005E6962 /* HideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881B5DC292228FD005E6962 /* HideView.swift */; };
+		1881B5DF29223559005E6962 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881B5DE29223559005E6962 /* MyWebView.swift */; };
+		18848D69292337A4005B4190 /* www_en in Resources */ = {isa = PBXBuildFile; fileRef = 18848D67292337A4005B4190 /* www_en */; };
+		18848D6A292337A4005B4190 /* www_cn in Resources */ = {isa = PBXBuildFile; fileRef = 18848D68292337A4005B4190 /* www_cn */; };
+		188852C32921AD4F00640137 /* EncryptPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188852C22921AD4F00640137 /* EncryptPicView.swift */; };
 		18AE538E291B4050004DB554 /* ZoomableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE538D291B4050004DB554 /* ZoomableModifier.swift */; };
 		18AE5390291B4970004DB554 /* ZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE538F291B4970004DB554 /* ZoomableView.swift */; };
 		18F561D82919CCAC000EA8BB /* PwdDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F561D72919CCAC000EA8BB /* PwdDetailView.swift */; };
@@ -124,6 +129,11 @@
 		188131E12918D8EC00C26706 /* AES256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256.swift; sourceTree = "<group>"; };
 		188131E32918D98F00C26706 /* MsgEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgEntity.swift; sourceTree = "<group>"; };
 		188131E62918DB1B00C26706 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		1881B5DC292228FD005E6962 /* HideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideView.swift; sourceTree = "<group>"; };
+		1881B5DE29223559005E6962 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		18848D67292337A4005B4190 /* www_en */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www_en; sourceTree = "<group>"; };
+		18848D68292337A4005B4190 /* www_cn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www_cn; sourceTree = "<group>"; };
+		188852C22921AD4F00640137 /* EncryptPicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptPicView.swift; sourceTree = "<group>"; };
 		18AE538D291B4050004DB554 /* ZoomableModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableModifier.swift; sourceTree = "<group>"; };
 		18AE538F291B4970004DB554 /* ZoomableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableView.swift; sourceTree = "<group>"; };
 		18F561D72919CCAC000EA8BB /* PwdDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwdDetailView.swift; sourceTree = "<group>"; };
@@ -218,6 +228,8 @@
 		1802B26F2918AD67006C4C55 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18848D68292337A4005B4190 /* www_cn */,
+				18848D67292337A4005B4190 /* www_en */,
 				1802B27B2918AE66006C4C55 /* InfoPlist.strings */,
 				1802B2812918B1A5006C4C55 /* Localizable.strings */,
 			);
@@ -280,6 +292,9 @@
 				18261F1B291A01650002C74C /* MsgDetailView.swift */,
 				1814F5F6291A09AD0080B45B /* EncryptView.swift */,
 				18FEEA87291A3559000D61FC /* DecryptView.swift */,
+				188852C22921AD4F00640137 /* EncryptPicView.swift */,
+				1881B5DC292228FD005E6962 /* HideView.swift */,
+				1881B5DE29223559005E6962 /* MyWebView.swift */,
 			);
 			path = Msg;
 			sourceTree = "<group>";
@@ -496,7 +511,9 @@
 				1802B2642918A043006C4C55 /* Preview Assets.xcassets in Resources */,
 				1802B27F2918B1A5006C4C55 /* Localizable.strings in Resources */,
 				1802B2792918AE66006C4C55 /* InfoPlist.strings in Resources */,
+				18848D69292337A4005B4190 /* www_en in Resources */,
 				1802B2892918C54E006C4C55 /* Launch Screen.storyboard in Resources */,
+				18848D6A292337A4005B4190 /* www_cn in Resources */,
 				1802B2612918A043006C4C55 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +534,7 @@
 				187D78632918DD6A00E869B1 /* String.swift in Sources */,
 				18261F142919F91B0002C74C /* TextImageView.swift in Sources */,
 				181DF6C4291A127600CE46D1 /* ShareSheet.swift in Sources */,
+				1881B5DF29223559005E6962 /* MyWebView.swift in Sources */,
 				188131DC2918D64E00C26706 /* DataManager.swift in Sources */,
 				187D78832918F28800E869B1 /* Accessory.swift in Sources */,
 				18261F162919FFFB0002C74C /* MsgView.swift in Sources */,
@@ -537,6 +555,7 @@
 				18F561E62919E885000EA8BB /* ToastView.swift in Sources */,
 				18FEEA90291A40CC000D61FC /* AuthUtility.swift in Sources */,
 				18FEEA8A291A3CA6000D61FC /* MoreCell.swift in Sources */,
+				1881B5DD292228FD005E6962 /* HideView.swift in Sources */,
 				18FEEA9A291A872C000D61FC /* ThumbnailView.swift in Sources */,
 				18FEEA96291A7BF5000D61FC /* PicDetailView.swift in Sources */,
 				188131E22918D8EC00C26706 /* AES256.swift in Sources */,
@@ -567,6 +586,7 @@
 				187D787C2918F07700E869B1 /* TipView.swift in Sources */,
 				187D787A2918F03800E869B1 /* PolicyView.swift in Sources */,
 				188131E42918D98F00C26706 /* MsgEntity.swift in Sources */,
+				188852C32921AD4F00640137 /* EncryptPicView.swift in Sources */,
 				188131E72918DB1B00C26706 /* Date.swift in Sources */,
 				18261F122919F8D50002C74C /* PwdCell.swift in Sources */,
 				1802B25D2918A042006C4C55 /* jmzsApp.swift in Sources */,

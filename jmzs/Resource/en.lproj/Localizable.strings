@@ -55,7 +55,8 @@
 "privacy_photo" = "Important pictures";
 "launch_pwd" = "Enable Master Password";
 "letter" = "Message";
-"add_letter_tip" = "Add a new secret letter";
+"add_letter_tip" = "Add a new secret message";
+"hide_text" = "Hide/Reveal Secret";
 "secret_text" = "Secret Text";
 "secret_photo" = "Secret Photo";
 "encrypt" = "Encrypt";
@@ -66,6 +67,7 @@
 "ciphertext" = "Ciphertext";
 "secret_msg" = "Secret Message";
 "plaintext" = "Plaintext";
+"plaintext_pic" = "Plaintext(Compressed photo < 10KB)";
 "copy_ciphertext" = "Paste the Ciphertext";
 "decrypt" = "Decrypt";
 "invalidate_ciphertext" = "The ciphertext format is incorrect. Please confirm that the ciphertext is generated through Crypto Helper";

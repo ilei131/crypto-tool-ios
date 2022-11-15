@@ -33,19 +33,6 @@ struct DecryptView: View {
                         isPresentingToast: $isPresentingToast
                     )
                 }
-                
-                Section(header: headerView(type: 2)) {
-                    VStack() {
-                        HStack {
-                            TextView(
-                                text: $model.content,
-                                isEditing: $isEditing,
-                                placeholder: "copy_ciphertext".localized())
-                        }
-                        Spacer()
-                    }
-                    .minHeight(180)
-                }
                 if !message.isEmpty {
                     Section(header: headerView(type: 1)) {
                         if model.type == 1 {
@@ -73,6 +60,18 @@ struct DecryptView: View {
                             }
                         }
                     }
+                }
+                Section(header: headerView(type: 2)) {
+                    VStack() {
+                        HStack {
+                            TextView(
+                                text: $model.content,
+                                isEditing: $isEditing,
+                                placeholder: "copy_ciphertext".localized())
+                        }
+                        Spacer()
+                    }
+                    .minHeight(180)
                 }
             }
             .navigationBarItems(leading: cancelNavItem, trailing: decryptNavItem)
@@ -141,20 +140,29 @@ struct DecryptView: View {
                 Text("copy_ciphertext".localized())
             }
             Spacer()
-            Button(action: {
-                if type == 1 {
-                    UIPasteboard.general.string = message
-                    isPresentingToast = true
-                } else {
+            if type == 1  {
+                if model.type == 1 {
+                    Button(action: {
+                        UIPasteboard.general.string = message
+                        isPresentingToast = true
+                    }) {
+                        Image(systemName: "doc.on.doc")
+                            .accentColor(.black)
+                            .imageScale(.large)
+                            .foregroundColor(.black)
+                    }
+                }
+            } else {
+                Button(action: {
                     if let string = UIPasteboard.general.string {
                         model.content = string
                     }
+                }) {
+                    Image(systemName: "doc.on.clipboard")
+                        .accentColor(.black)
+                        .imageScale(.large)
+                        .foregroundColor(.black)
                 }
-            }) {
-                Image(systemName: type == 2 ? "doc.on.clipboard" : "doc.on.doc")
-                    .accentColor(.black)
-                    .imageScale(.large)
-                    .foregroundColor(.black)
             }
         }
     }
@@ -185,11 +193,5 @@ struct DecryptView: View {
             model.time = arr[2]
         }
         isEditing = false
-    }
-}
-
-struct DecryptView_Previews: PreviewProvider {
-    static var previews: some View {
-        Text("")
     }
 }

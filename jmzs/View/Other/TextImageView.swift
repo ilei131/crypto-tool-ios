@@ -13,13 +13,13 @@ struct TextImageView: View {
         ZStack(alignment: .center) {
             if type == 1 {
                 Image(systemName: "lock.shield")
-                    .font(.system(size: 16, weight: .regular))
-                    .padding(14)
+                    .font(.system(size: 20, weight: .regular))
+                    .padding(12)
                     .foregroundColor(Color(hexadecimal: "5366df"))
             } else {
                 Image(systemName: "ellipsis.bubble")
-                    .font(.system(size: 16, weight: .regular))
-                    .padding(14)
+                    .font(.system(size: 20, weight: .regular))
+                    .padding(12)
                     .foregroundColor(Color(hexadecimal: "5366df"))
             }
         }

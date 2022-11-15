@@ -16,8 +16,8 @@ struct PicCell: View {
             HStack(alignment: .center) {
                 ZStack(alignment: .center) {
                     Image(systemName: "photo")
-                        .font(.system(size: 16, weight: .regular))
-                        .padding(14)
+                        .font(.system(size: 20, weight: .regular))
+                        .padding(12)
                         .foregroundColor(Color(hexadecimal: "5366df"))
                         .background(Circle().fill(Color(hexadecimal: "F1F1F1")))
                 }
