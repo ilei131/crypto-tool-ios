@@ -23,6 +23,7 @@ struct HideView: View {
     var body: some View {
         let bundleStr = Bundle.main.url(forResource: getCurrentFile(), withExtension: "html")
         return MyWebView(url: bundleStr)
+            .navigationBarItems(leading: cancelNavItem)
     }
     
     var cancelNavItem: some View {
