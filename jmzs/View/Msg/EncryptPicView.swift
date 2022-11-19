@@ -17,7 +17,7 @@ struct EncryptPicView: View {
     @State private var tipContent = ""
     @State private var showImagePickerOptions: Bool = false
     @State private var showSheet: Bool = false
-    @State private var sourceType = UIImagePickerController.SourceType.photoLibrary
+    @State private var sourceType : Int?
     @State private var imageString = ""
     @State var editMode = true
     var body: some View {
@@ -59,7 +59,19 @@ struct EncryptPicView: View {
                                 .highPriorityGesture(TapGesture().onEnded {
                                     showImagePickerOptions = true
                                 })
-                                .ActionSheet(showImagePickerOptions: $showImagePickerOptions, showImagePicker: $showSheet, sourceType: $sourceType)
+                                .actionSheet(isPresented: $showImagePickerOptions) {
+                                    SwiftUI.ActionSheet(title: Text("Choose".localized()), buttons: [
+                                        .default(Text("Photo Library".localized())) {
+                                            sourceType = 1//.photoLibrary
+                                            showSheet = true
+                                        },
+                                        .default(Text("Camera".localized())) {
+                                            sourceType = 2//.camera
+                                            showSheet = true
+                                        },
+                                        .cancel()
+                                    ])
+                                }
                                 Spacer()
                             }
                             Spacer()
@@ -103,7 +115,7 @@ struct EncryptPicView: View {
                autoDismiss: .after(1))
         .sheet(isPresented: $showSheet) {
             ImagePicker(isShown: self.$showSheet,
-                        sourceType: self.sourceType,
+                        sourceType: sourceType == 1 ? .photoLibrary : .camera,
                         onSelect:onSelectAction,
                         needZip:true)
         }
