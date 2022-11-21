@@ -10,7 +10,9 @@ import CoreData
 
 struct PicCell: View {
     @ObservedObject var item: Pic
-    
+    @Environment(\.managedObjectContext) var context
+    @State private var showAlert = false
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
@@ -35,5 +37,49 @@ struct PicCell: View {
         .padding()
         .background(Color(.secondarySystemGroupedBackground).brightness(0))
         .clipShape(RoundedRectangle(cornerRadius: 12))
+        .overlay(DeleteButton(onDelete: removeRows), alignment:.topTrailing)
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("tip".localized()),
+                  message: Text("delete_sure".localized()),
+                  primaryButton: .default(
+                    Text("ok".localized()),
+                    action: clearData
+                  ),
+                  secondaryButton: .destructive(
+                    Text("cancel".localized())
+                  )
+            )
+        }
+    }
+    
+    func removeRows() {
+        showAlert = true
+    }
+    
+    func clearData() {
+        withAnimation {
+            context.delete(item)
+            context.quickSave()
+        }
+    }
+}
+
+struct DeleteButton: View {
+    @Environment(\.editMode) var editMode
+    let onDelete: () -> ()
+
+    var body: some View {
+        VStack {
+            if self.editMode?.wrappedValue == .active {
+                Button(action: {
+                    self.onDelete()
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .accentColor(Color(UIColor(named: "AccentColor")!))
+                        .imageScale(.large)
+                }
+                .offset(x: 10, y: -10)
+            }
+        }
     }
 }

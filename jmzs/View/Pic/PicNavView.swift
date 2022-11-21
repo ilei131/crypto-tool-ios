@@ -15,7 +15,7 @@ struct PicNavView: View {
         return NavigationView() {
          PicView()
                 .navigationBarTitle(Text(title), displayMode:.inline)
-                .navigationBarItems(trailing:
+                .navigationBarItems(leading: EditButton(),trailing:
                     Button(action: { beginCreate()}) {
                         Image(systemName: "plus")
                             .imageScale(.large)
