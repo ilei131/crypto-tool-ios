@@ -147,9 +147,9 @@ struct DecryptView: View {
                         isPresentingToast = true
                     }) {
                         Image(systemName: "doc.on.doc")
-                            .accentColor(.black)
+                            .accentColor(Color("titleColor"))
                             .imageScale(.large)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("titleColor"))
                     }
                 }
             } else {
@@ -159,9 +159,9 @@ struct DecryptView: View {
                     }
                 }) {
                     Image(systemName: "doc.on.clipboard")
-                        .accentColor(.black)
+                        .accentColor(Color("titleColor"))
                         .imageScale(.large)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("titleColor"))
                 }
             }
         }

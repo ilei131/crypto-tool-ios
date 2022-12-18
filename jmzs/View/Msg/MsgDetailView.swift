@@ -111,16 +111,16 @@ struct MsgDetailView: View {
                 isPresentingToast = true
             }) {
                 Image(systemName: "doc.on.doc")
-                    .accentColor(.black)
+                    .accentColor(Color("titleColor"))
                     .imageScale(.large)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("titleColor"))
             }
             if type == 1, model.owner {
                 Button(action: shareAction) {
                     Image(systemName: "square.and.arrow.up")
-                        .accentColor(.black)
+                        .accentColor(Color("titleColor"))
                         .imageScale(.large)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("titleColor"))
                 }
             }
         }

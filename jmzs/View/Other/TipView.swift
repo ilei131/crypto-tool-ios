@@ -23,7 +23,7 @@ struct TipView: View {
                     .foregroundColor(Color(hexadecimal: "434343"))
                 + Text("reminder_m".localized())
                     .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("titleColor"))
                 + Text("reminder_e".localized())
                     .font(.system(size: 16))
                     .foregroundColor(Color(hexadecimal: "434343"))

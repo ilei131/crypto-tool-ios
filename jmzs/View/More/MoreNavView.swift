@@ -43,7 +43,7 @@ struct MoreNavView: View {
                                 .resizable(true)
                                 .scaledToFit()
                                 .frame(CGSize(width: 24, height: 24))
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("titleColor"))
                             if #available(iOS 14.0, *) {
                                 Toggle("launch_pwd".localized(), isOn: $dataManager.validateWhenLaunch)
                                     .toggleStyle(SwitchToggleStyle(tint: Color(UIColor(named: "AccentColor")!)))
@@ -56,7 +56,7 @@ struct MoreNavView: View {
                                 .resizable(true)
                                 .scaledToFit()
                                 .frame(CGSize(width: 24, height: 24))
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("titleColor"))
                             if #available(iOS 14.0, *) {
                                 Toggle("enable face id".localized(), isOn: $dataManager.enableFaceID)
                                     .toggleStyle(SwitchToggleStyle(tint: Color(UIColor(named: "AccentColor")!)))

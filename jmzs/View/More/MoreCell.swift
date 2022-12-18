@@ -16,9 +16,9 @@ struct MoreCell: View {
                 .resizable(true)
                 .scaledToFit()
                 .frame(CGSize(width: 24, height: 24))
-                .foregroundColor(.black)
+                .foregroundColor(Color("titleColor"))
             Text(title)
-                .foregroundColor(.black)
+                .foregroundColor(Color("titleColor"))
             Spacer()
         }
     }

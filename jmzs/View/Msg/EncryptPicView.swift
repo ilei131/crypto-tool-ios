@@ -158,7 +158,7 @@ struct EncryptPicView: View {
                 isPresentingToast = true
             }) {
                 Image(systemName: "doc.on.doc")
-                    .accentColor(.black)
+                    .accentColor(Color("titleColor"))
                     .imageScale(.large)
                     .foregroundColor(Color(UIColor(named: "titleColor")!))
             }

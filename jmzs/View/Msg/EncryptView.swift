@@ -135,9 +135,9 @@ struct EncryptView: View {
                 }
             }) {
                 Image(systemName: type == 1 ? "doc.on.clipboard" : "doc.on.doc")
-                    .accentColor(.black)
+                    .accentColor(Color("titleColor"))
                     .imageScale(.large)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("titleColor"))
             }
         }
     }

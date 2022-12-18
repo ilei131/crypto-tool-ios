@@ -46,14 +46,14 @@ struct MyTextField: View {
                         HStack {
                             Button(action: {}) {
                                 Image(systemName: self.isSecured ? "eye.slash" : "eye")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(Color("titleColor"))
                             }
                             .highPriorityGesture(TapGesture().onEnded {
                                 isSecured.toggle()
                             })
                             Button(action: {}) {
                                 Image(systemName: "doc.on.doc")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(Color("titleColor"))
                             }
                             .highPriorityGesture(TapGesture().onEnded {
                                 UIPasteboard.general.string = text
@@ -73,7 +73,7 @@ struct MyTextField: View {
                     if !isEdit {
                         Button(action: {}) {
                             Image(systemName: "doc.on.doc")
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("titleColor"))
                         }
                         .highPriorityGesture(TapGesture().onEnded {
                             UIPasteboard.general.string = text
