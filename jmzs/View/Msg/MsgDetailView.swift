@@ -77,7 +77,7 @@ struct MsgDetailView: View {
     }
     
     func showPic() -> some View {
-        return Section(header: Text("ciphertext".localized())) {
+        return Section(header: Text("plaintext".localized())) {
             VStack() {
                 if !message.isEmpty {
                     if let imageData = Data.init(base64Encoded: message) {

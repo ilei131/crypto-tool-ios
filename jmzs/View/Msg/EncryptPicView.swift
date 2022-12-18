@@ -133,7 +133,7 @@ struct EncryptPicView: View {
             tipContent = "tip_content".localized()
             showAlert = true
         } else if model.content.isEmpty {
-            tipContent = "plaintext_cannot_be_empty".localized()
+            tipContent = "ciphertext_cannot_be_empty".localized()
             showAlert = true
         } else {
             DataManager.shared.addMessageAndSave(model)
