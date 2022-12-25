@@ -34,7 +34,7 @@ struct ThumbnailView: View {
                         .renderingMode(.original)
                         .resizable().aspectRatio(contentMode: .fit)
                 }
-                .highPriorityGesture(TapGesture().onEnded {
+                .gesture(TapGesture.init(count: 1).onEnded {
                     showImagePickerOptions = true
                 })
                 .actionSheet(isPresented: $showImagePickerOptions) {
@@ -57,7 +57,7 @@ struct ThumbnailView: View {
                             .renderingMode(.original)
                             .resizable().aspectRatio(contentMode: .fill)
                     }
-                    .highPriorityGesture(TapGesture().onEnded {
+                    .gesture(TapGesture.init(count: 1).onEnded {
                         if !isEdit {
                             withAnimation(.easeInOut) {
                                 vm.selectedImageID = pictrue.id!
@@ -72,7 +72,9 @@ struct ThumbnailView: View {
                             .accentColor(Color(UIColor(named: "AccentColor")!))
                             .imageScale(.large)
                     }
-                    .highPriorityGesture(TapGesture().onEnded {
+                    .padding()
+                    .contentShape(Rectangle())
+                    .gesture(TapGesture.init(count: 1).onEnded {
                         if let onDeleteAction = onDelete {
                             onDeleteAction(index)
                         }

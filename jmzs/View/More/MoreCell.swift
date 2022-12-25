@@ -10,13 +10,14 @@ import SwiftUI
 struct MoreCell: View {
     var icon = ""
     var title = ""
+    var color = "titleColor"
     var body: some View {
         HStack {
             Image(systemName: icon)
                 .resizable(true)
                 .scaledToFit()
                 .frame(CGSize(width: 24, height: 24))
-                .foregroundColor(Color("titleColor"))
+                .foregroundColor(Color(hexadecimal: color))
             Text(title)
                 .foregroundColor(Color("titleColor"))
             Spacer()

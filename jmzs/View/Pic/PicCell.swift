@@ -31,7 +31,7 @@ struct PicCell: View {
             }
             Text(item.title ?? "")
                 .bold()
-                .multilineTextAlignment(.leading)
+                .lineLimit(1)
                 .foregroundColor(Color(hexadecimal: "8a8a8a"))
         }
         .padding()

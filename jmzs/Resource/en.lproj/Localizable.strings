@@ -78,3 +78,6 @@
 "something went wrong" = "Something went wrong while authenticating. Please try again.";
 "unlock" = "Unlock";
 "enable face id" = "Enable Face ID";
+"share this app" = "Share this app";
+"scan qr code" = "Scan QR code";
+"make qr code" = "Make QR code";

@@ -52,8 +52,7 @@ struct PicDetailView: View, NavProtocal {
                                 .background(
                                     pic
                                 )
-                                .minHeight(80)
-                                .clipped()
+                                .minHeight(90)
                                 .clipShape(RoundedRectangle(cornerRadius: 4))
                         }
                     }

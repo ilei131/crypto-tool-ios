@@ -33,6 +33,9 @@ struct BigPicView: View {
                                 .resizable()
                                 .scaledToFit()
                         }
+                        .gesture(TapGesture.init(count: 1).onEnded {
+                            onCancelAction()
+                        })
                         VStack {
                             Spacer()
                             HStack {
@@ -68,8 +71,8 @@ struct BigPicView: View {
     }
     
     func onCancelAction() {
-        withAnimation(.default) {
+        //withAnimation(.easeOut)  {
             vm.showImageViewer.toggle()
-        }
+        //}
     }
 }

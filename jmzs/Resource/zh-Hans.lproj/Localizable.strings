@@ -79,3 +79,6 @@
 "something went wrong" = "身份验证时出错，请再试一次。";
 "unlock" = "解锁";
 "enable face id" = "启用面容ID";
+"share this app" = "分享此App";
+"scan qr code" = "扫描二维码";
+"make qr code" = "制作二维码";

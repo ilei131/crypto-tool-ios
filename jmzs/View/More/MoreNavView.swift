@@ -7,17 +7,19 @@
 
 import SwiftUI
 import StoreKit
+import Foundation
 
 struct MoreNavView: View {
     @State private var showAlert = false
-    @State private var showSheet = false //
+    @State private var type: Int?
     @ObservedObject var dataManager: DataManager
+    @State private var showShareSheet = false
     
     var body: some View {
         return NavigationView {
             VStack {
                 let title = "more".localized()
-                Form {
+                List {
                     Section(header: headerView) {
                         Button(action: {
                             if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
@@ -26,24 +28,24 @@ struct MoreNavView: View {
                                 }
                             }
                         }) {
-                            MoreCell(icon:"star", title: "score".localized())
+                            MoreCell(icon:"star", title: "score".localized(), color: "fbc344")
                         }
                         Button(action: {
-                            showSheet = true
+                            type = 1
                         }) {
-                            MoreCell(icon:"lock.shield", title: "policy".localized())
+                            MoreCell(icon:"lock.shield", title: "policy".localized(), color: "5366df")
                         }
                         Button(action: {
                             showAlert = true
                         }) {
-                            MoreCell(icon:"trash", title: "trash".localized())
+                            MoreCell(icon:"trash", title: "trash".localized(), color: "e7605e")
                         }
                         HStack{
                             Image(systemName: "lock")
                                 .resizable(true)
                                 .scaledToFit()
                                 .frame(CGSize(width: 24, height: 24))
-                                .foregroundColor(Color("titleColor"))
+                                .foregroundColor(Color(hexadecimal: "984ee4"))
                             if #available(iOS 14.0, *) {
                                 Toggle("launch_pwd".localized(), isOn: $dataManager.validateWhenLaunch)
                                     .toggleStyle(SwitchToggleStyle(tint: Color(UIColor(named: "AccentColor")!)))
@@ -56,7 +58,7 @@ struct MoreNavView: View {
                                 .resizable(true)
                                 .scaledToFit()
                                 .frame(CGSize(width: 24, height: 24))
-                                .foregroundColor(Color("titleColor"))
+                                .foregroundColor(Color(hexadecimal: "56c37c"))
                             if #available(iOS 14.0, *) {
                                 Toggle("enable face id".localized(), isOn: $dataManager.enableFaceID)
                                     .toggleStyle(SwitchToggleStyle(tint: Color(UIColor(named: "AccentColor")!)))
@@ -67,6 +69,18 @@ struct MoreNavView: View {
                     }
                 }
                 .navigationBarTitle(Text(title), displayMode:.inline)
+                .navigationBarItems(trailing:
+                    Menu {
+                        Button(action: { type = 2 }, label: Label("scan qr code", systemImage: "qrcode.viewfinder"))
+                        Button(action: {}, label: Label("make qr code", systemImage: "qrcode"))
+                        Button(action: shareAction, label: Label("share this app", systemImage: "arrowshape.turn.up.forward"))
+                    } label: {
+                        icon: do {
+                            Image(systemName: "plus")
+                            .imageScale(.large)
+                            .padding(EdgeInsets(top: 4, leading: 20, bottom: 4, trailing: 0))}
+                    }
+                )
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("tip".localized()),
                           message: Text("delete_tip".localized()),
@@ -79,11 +93,29 @@ struct MoreNavView: View {
                           )
                     )
                 }
-                .sheet(isPresented: $showSheet) {
-                    createForm
+                .sheet(item:$type) { item in
+                    switch item {
+                        case 1:
+                            createPolicyView
+                        case 2:
+                            createCodeScannerView
+                    default:
+                        EmptyView()
+                    }
                 }
             }
+            .shareSheet(items: ["https://apps.apple.com/cn/app/加密助手/id6444359504"],
+                        isPresented: $showShareSheet,
+                        excludedActivityTypes:nil)
         }
+    }
+    
+    func showMenu() {
+        
+    }
+    
+    func shareAction() {
+        showShareSheet = true
     }
     
     var headerView: some View {
@@ -95,7 +127,7 @@ struct MoreNavView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(CGSize(width: 150, height: 150))
-                Text("Version 1.0")
+                Text("Version 1.1")
                     .font(.system(size: 16))
             }
             Spacer()
@@ -106,15 +138,14 @@ struct MoreNavView: View {
         DataManager.shared.clearData()
     }
     
-    var createForm: some View {
+    var createPolicyView: some View {
         return NavigationView {
             PolicyView()
         }
     }
-}
-
-struct MoreNavView_Previews: PreviewProvider {
-    static var previews: some View {
-        Text("")
+    
+    var createCodeScannerView: some View {
+        return EmptyView()
     }
+
 }
