@@ -35,7 +35,7 @@ struct MsgListView: View {
                 .onDelete(perform: self.removeItem)
             }
         } else {
-            EmptyView()
+            EmptyTipView()
         }
     }
     

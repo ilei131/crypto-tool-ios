@@ -45,7 +45,7 @@ struct PicListView: View {
             }
             .background(Color(.systemGroupedBackground))
         } else {
-            EmptyView()
+            EmptyTipView()
         }
 //        if fetchRequest.wrappedValue.count > 0 {
 //            List {

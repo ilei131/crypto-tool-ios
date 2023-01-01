@@ -42,7 +42,7 @@ struct PwdListView: View {
                 .onDelete(perform: self.removeItem)
             }
         } else {
-            EmptyView()
+            EmptyTipView()
         }
     }
     

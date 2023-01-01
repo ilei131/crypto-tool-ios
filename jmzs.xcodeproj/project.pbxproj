@@ -16,6 +16,12 @@
 		1802B27F2918B1A5006C4C55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1802B2812918B1A5006C4C55 /* Localizable.strings */; };
 		1802B2872918C450006C4C55 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 1802B2862918C450006C4C55 /* SwiftUIX */; };
 		1802B2892918C54E006C4C55 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1802B2882918C54E006C4C55 /* Launch Screen.storyboard */; };
+		18034781295FC9D3009D6FF6 /* GenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18034780295FC9D3009D6FF6 /* GenerateView.swift */; };
+		18034783295FCEC1009D6FF6 /* ShareActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18034782295FCEC1009D6FF6 /* ShareActivity.swift */; };
+		18034786295FF6FE009D6FF6 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18034785295FF6FE009D6FF6 /* ScannerView.swift */; };
+		18034788295FF70E009D6FF6 /* ScannerResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18034787295FF70E009D6FF6 /* ScannerResultView.swift */; };
+		1803478B295FF761009D6FF6 /* ScannedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803478A295FF761009D6FF6 /* ScannedObject.swift */; };
+		1803478D295FF797009D6FF6 /* ObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803478C295FF797009D6FF6 /* ObjectType.swift */; };
 		1814F5F7291A09AD0080B45B /* EncryptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814F5F6291A09AD0080B45B /* EncryptView.swift */; };
 		181DF6C1291A10D600CE46D1 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DF6C0291A10D600CE46D1 /* TextView.swift */; };
 		181DF6C4291A127600CE46D1 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DF6C3291A127600CE46D1 /* ShareSheet.swift */; };
@@ -51,6 +57,9 @@
 		1881B5DF29223559005E6962 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881B5DE29223559005E6962 /* MyWebView.swift */; };
 		18848D69292337A4005B4190 /* www_en in Resources */ = {isa = PBXBuildFile; fileRef = 18848D67292337A4005B4190 /* www_en */; };
 		18848D6A292337A4005B4190 /* www_cn in Resources */ = {isa = PBXBuildFile; fileRef = 18848D68292337A4005B4190 /* www_cn */; };
+		18868FE2296120330030EDB5 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18868FE1296120330030EDB5 /* ScannerViewModel.swift */; };
+		18868FE4296121FA0030EDB5 /* QrEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18868FE3296121FA0030EDB5 /* QrEntity.swift */; };
+		18868FE629612EE50030EDB5 /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18868FE529612EE50030EDB5 /* CodeScannerView.swift */; };
 		188852C32921AD4F00640137 /* EncryptPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188852C22921AD4F00640137 /* EncryptPicView.swift */; };
 		18AE538E291B4050004DB554 /* ZoomableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE538D291B4050004DB554 /* ZoomableModifier.swift */; };
 		18AE5390291B4970004DB554 /* ZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE538F291B4970004DB554 /* ZoomableView.swift */; };
@@ -98,6 +107,12 @@
 		1802B2822918B1AA006C4C55 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1802B2842918C439006C4C55 /* SwiftUIX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIX; sourceTree = "<group>"; };
 		1802B2882918C54E006C4C55 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		18034780295FC9D3009D6FF6 /* GenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateView.swift; sourceTree = "<group>"; };
+		18034782295FCEC1009D6FF6 /* ShareActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivity.swift; sourceTree = "<group>"; };
+		18034785295FF6FE009D6FF6 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		18034787295FF70E009D6FF6 /* ScannerResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerResultView.swift; sourceTree = "<group>"; };
+		1803478A295FF761009D6FF6 /* ScannedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedObject.swift; sourceTree = "<group>"; };
+		1803478C295FF797009D6FF6 /* ObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectType.swift; sourceTree = "<group>"; };
 		1814F5F6291A09AD0080B45B /* EncryptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptView.swift; sourceTree = "<group>"; };
 		181DF6C0291A10D600CE46D1 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		181DF6C3291A127600CE46D1 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
@@ -133,6 +148,9 @@
 		1881B5DE29223559005E6962 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		18848D67292337A4005B4190 /* www_en */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www_en; sourceTree = "<group>"; };
 		18848D68292337A4005B4190 /* www_cn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www_cn; sourceTree = "<group>"; };
+		18868FE1296120330030EDB5 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		18868FE3296121FA0030EDB5 /* QrEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrEntity.swift; sourceTree = "<group>"; };
+		18868FE529612EE50030EDB5 /* CodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
 		188852C22921AD4F00640137 /* EncryptPicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptPicView.swift; sourceTree = "<group>"; };
 		18AE538D291B4050004DB554 /* ZoomableModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableModifier.swift; sourceTree = "<group>"; };
 		18AE538F291B4970004DB554 /* ZoomableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableView.swift; sourceTree = "<group>"; };
@@ -251,6 +269,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		18034784295FF6B5009D6FF6 /* QrCode */ = {
+			isa = PBXGroup;
+			children = (
+				18034780295FC9D3009D6FF6 /* GenerateView.swift */,
+				18034785295FF6FE009D6FF6 /* ScannerView.swift */,
+				18034787295FF70E009D6FF6 /* ScannerResultView.swift */,
+				1803478A295FF761009D6FF6 /* ScannedObject.swift */,
+				1803478C295FF797009D6FF6 /* ObjectType.swift */,
+				18868FE1296120330030EDB5 /* ScannerViewModel.swift */,
+				18868FE529612EE50030EDB5 /* CodeScannerView.swift */,
+			);
+			path = QrCode;
+			sourceTree = "<group>";
+		};
 		181DF6C2291A125C00CE46D1 /* ShareSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +297,7 @@
 				187D78602918DCDE00E869B1 /* Constants.swift */,
 				18F7EB59291930570019E82F /* Util.swift */,
 				18FEEA8F291A40CC000D61FC /* AuthUtility.swift */,
+				18034782295FCEC1009D6FF6 /* ShareActivity.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -330,6 +363,7 @@
 		187D786C2918EAC900E869B1 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				18034784295FF6B5009D6FF6 /* QrCode */,
 				187D78752918EE1B00E869B1 /* MoreNavView.swift */,
 				18FEEA89291A3CA5000D61FC /* MoreCell.swift */,
 				18FEEA8B291A402A000D61FC /* AuthView.swift */,
@@ -359,6 +393,7 @@
 				188131E32918D98F00C26706 /* MsgEntity.swift */,
 				187D78642918E70000E869B1 /* PicEntity.swift */,
 				187D78662918E7A400E869B1 /* Thumbnail.swift */,
+				18868FE3296121FA0030EDB5 /* QrEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -527,6 +562,7 @@
 			files = (
 				18261F1C291A01650002C74C /* MsgDetailView.swift in Sources */,
 				187D78812918F27400E869B1 /* Manager.swift in Sources */,
+				18034783295FCEC1009D6FF6 /* ShareActivity.swift in Sources */,
 				187D78852918F29500E869B1 /* Modify.swift in Sources */,
 				18FEEA9D291A87CA000D61FC /* ImagePicker.swift in Sources */,
 				187D786E2918EAEE00E869B1 /* HomeView.swift in Sources */,
@@ -549,8 +585,10 @@
 				18FEEA9F291A87FC000D61FC /* ActionSheetModifier.swift in Sources */,
 				18FEEA94291A7999000D61FC /* PicListView.swift in Sources */,
 				18FEEA88291A3559000D61FC /* DecryptView.swift in Sources */,
+				1803478B295FF761009D6FF6 /* ScannedObject.swift in Sources */,
 				181DF6C1291A10D600CE46D1 /* TextView.swift in Sources */,
 				18FEEA98291A7E7C000D61FC /* PicViewModel.swift in Sources */,
+				18868FE629612EE50030EDB5 /* CodeScannerView.swift in Sources */,
 				18F7EB5A291930570019E82F /* Util.swift in Sources */,
 				18F561E62919E885000EA8BB /* ToastView.swift in Sources */,
 				18FEEA90291A40CC000D61FC /* AuthUtility.swift in Sources */,
@@ -558,22 +596,28 @@
 				1881B5DD292228FD005E6962 /* HideView.swift in Sources */,
 				18FEEA9A291A872C000D61FC /* ThumbnailView.swift in Sources */,
 				18FEEA96291A7BF5000D61FC /* PicDetailView.swift in Sources */,
+				18034781295FC9D3009D6FF6 /* GenerateView.swift in Sources */,
 				188131E22918D8EC00C26706 /* AES256.swift in Sources */,
 				187D787F2918F11B00E869B1 /* SlideOverCardView.swift in Sources */,
 				18FEEA8E291A4038000D61FC /* AuthViewModel.swift in Sources */,
 				187D78722918EDE400E869B1 /* PicNavView.swift in Sources */,
 				187D78872918F2A200E869B1 /* SlideOverCard.swift in Sources */,
 				18F561E82919E890000EA8BB /* Utils.swift in Sources */,
+				1803478D295FF797009D6FF6 /* ObjectType.swift in Sources */,
+				18034786295FF6FE009D6FF6 /* ScannerView.swift in Sources */,
 				18FEEA92291A796C000D61FC /* PicView.swift in Sources */,
 				18F7EB6429193A350019E82F /* ManagedObjectContext.swift in Sources */,
 				18F7EB60291938610019E82F /* PwdListView.swift in Sources */,
 				18FEEAB8291A9872000D61FC /* PicCell.swift in Sources */,
+				18034788295FF70E009D6FF6 /* ScannerResultView.swift in Sources */,
 				187D78702918EDA400E869B1 /* PwdNavView.swift in Sources */,
 				18261F18291A00230002C74C /* MsgListView.swift in Sources */,
 				18F7EB62291939D30019E82F /* EmptyView.swift in Sources */,
 				18F561E42919E85E000EA8BB /* ContainerView.swift in Sources */,
+				18868FE4296121FA0030EDB5 /* QrEntity.swift in Sources */,
 				18AE5390291B4970004DB554 /* ZoomableView.swift in Sources */,
 				18AE538E291B4050004DB554 /* ZoomableModifier.swift in Sources */,
+				18868FE2296120330030EDB5 /* ScannerViewModel.swift in Sources */,
 				187D78672918E7A400E869B1 /* Thumbnail.swift in Sources */,
 				18F561DB2919CD40000EA8BB /* NavProtocal.swift in Sources */,
 				187D78612918DCDE00E869B1 /* Constants.swift in Sources */,

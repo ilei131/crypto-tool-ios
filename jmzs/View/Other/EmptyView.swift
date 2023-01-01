@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyView: View {
+struct EmptyTipView: View {
     var body: some View {
         VStack {
             Spacer()
@@ -17,7 +17,7 @@ struct EmptyView: View {
     }
 }
 
-struct EmptyView_Previews: PreviewProvider {
+struct EmptyTipView_Previews: PreviewProvider {
     static var previews: some View {
         EmptyView()
     }

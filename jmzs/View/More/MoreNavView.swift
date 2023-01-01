@@ -13,13 +13,14 @@ struct MoreNavView: View {
     @State private var showAlert = false
     @State private var type: Int?
     @ObservedObject var dataManager: DataManager
-    @State private var showShareSheet = false
-    
+    @State private var showGenerateView = false
+    @State private var menuType: Int = 1
+
     var body: some View {
         return NavigationView {
             VStack {
                 let title = "more".localized()
-                List {
+                Form {
                     Section(header: headerView) {
                         Button(action: {
                             if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
@@ -71,15 +72,19 @@ struct MoreNavView: View {
                 .navigationBarTitle(Text(title), displayMode:.inline)
                 .navigationBarItems(trailing:
                     Menu {
-                        Button(action: { type = 2 }, label: Label("scan qr code", systemImage: "qrcode.viewfinder"))
-                        Button(action: {}, label: Label("make qr code", systemImage: "qrcode"))
-                        Button(action: shareAction, label: Label("share this app", systemImage: "arrowshape.turn.up.forward"))
+                        Button(action: {showGenerateView = true}, label: Label("scan qr code", systemImage: "qrcode.viewfinder"))
+                        Button(action: {type = 2}, label: Label("make qr code", systemImage: "qrcode"))
+                        Button(action: {type = 3}, label: Label("share this app", systemImage: "arrowshape.turn.up.forward"))
                     } label: {
                         icon: do {
                             Image(systemName: "plus")
                             .imageScale(.large)
                             .padding(EdgeInsets(top: 4, leading: 20, bottom: 4, trailing: 0))}
                     }
+                    .background(
+                        NavigationLink(destination: scannerView, isActive: $showGenerateView) {
+                            EmptyView()
+                        })
                 )
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("tip".localized()),
@@ -96,26 +101,21 @@ struct MoreNavView: View {
                 .sheet(item:$type) { item in
                     switch item {
                         case 1:
-                            createPolicyView
+                            scannerView
                         case 2:
-                            createCodeScannerView
+                            createGenerateView
+                        case 3:
+                            TextShareSheet(text: "https://apps.apple.com/app/id6444359504")
                     default:
                         EmptyView()
                     }
                 }
             }
-            .shareSheet(items: ["https://apps.apple.com/cn/app/加密助手/id6444359504"],
-                        isPresented: $showShareSheet,
-                        excludedActivityTypes:nil)
         }
     }
     
-    func showMenu() {
-        
-    }
-    
     func shareAction() {
-        showShareSheet = true
+        //showShareSheet = true
     }
     
     var headerView: some View {
@@ -138,14 +138,19 @@ struct MoreNavView: View {
         DataManager.shared.clearData()
     }
     
+    var scannerView: some View {
+        return ScannerView()
+    }
+    
     var createPolicyView: some View {
         return NavigationView {
             PolicyView()
         }
     }
     
-    var createCodeScannerView: some View {
-        return EmptyView()
+    var createGenerateView: some View {
+        return NavigationView {
+            GenerateView()
+        }
     }
-
 }

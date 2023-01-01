@@ -81,3 +81,20 @@
 "share this app" = "Share this app";
 "scan qr code" = "Scan QR code";
 "make qr code" = "Make QR code";
+//GENERATE VIEW
+"generator.info" = "You can create your QR code instantly by entering the text you want in the field below.";
+"generator.info.share" = "You can tap the code to share it.";
+"generator.input.placeholder" = "Text to Generate";
+"generator.button.generate" ="Generate";
+"generator.info.clipboard.part1" ="There is already data copied to the clipboard.\n\n";
+"generator.info.clipboard.part2" ="\n\nDo you want to generate QR with this data?";
+"generate" = "Generate";
+//SCANNER VIEW
+"scanner.scanning" = "Scanning...";
+"scanner.scanning.result" = "Scanning Result";
+"scanner.scanning.info" = "Align the QR code within the frame to scan";
+"scanner.scanning.result.info" = "You can copy the QR information or easily share it with the application you want.";
+"scanner.scanning.result.empty" = "No data found after code scanning";
+"alert.title.success" = "Success";
+"alert.title.info" = "Info";
+"alert.msg.copy.success" = "Text copied to clipboard!";

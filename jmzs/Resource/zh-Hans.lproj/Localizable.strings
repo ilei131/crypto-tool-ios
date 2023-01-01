@@ -82,3 +82,20 @@
 "share this app" = "分享此App";
 "scan qr code" = "扫描二维码";
 "make qr code" = "制作二维码";
+//GENERATE VIEW
+"generator.info" = "通过在下面的字段中输入所需的文本，您可以立即创建二维码。";
+"generator.info.share" = "您可以点击二维码进行分享。";
+"generator.input.placeholder" = "生成二维码的文本";
+"generator.button.generate" ="生成";
+"generator.info.clipboard.part1" ="已有数据复制到剪贴板。\n\n";
+"generator.info.clipboard.part2" ="\n\n是否要使用此数据生成二维码？";
+"generate" = "生成";
+//SCANNER VIEW
+"scanner.scanning" = "正在扫描...";
+"scanner.scanning.result" = "扫描结果";
+"scanner.scanning.info" = "在框架内对齐二维码进行扫描";
+"scanner.scanning.result.info" = "您可以复制二维码信息，也可以轻松地与所需的应用程序共享。";
+"scanner.scanning.result.empty" = "扫码后未找到数据";
+"alert.title.success" = "操作成功";
+"alert.title.info" = "提示";
+"alert.msg.copy.success" = "文本已复制到剪贴板！";

@@ -13,4 +13,11 @@ extension Date {
         df.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return df.string(from: self)
     }
+    
+    func toString(format: String, timezoneIdentifier: String? = nil) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: self as Date)
+    }
 }
+
