@@ -34,12 +34,6 @@ extension String {
         return false
     }
     
-    func actionSheet() {
-        guard let data = URL(string: self) else { return }
-        let av = UIActivityViewController(activityItems: [data], applicationActivities: nil)
-        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
-    }
-    
     private func matches(pattern: String) -> Bool {
         let regex = try! NSRegularExpression(
             pattern: pattern,

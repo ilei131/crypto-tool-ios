@@ -26,7 +26,7 @@ struct ScannerResultView: View {
                 .frame(maxWidth: .infinity, alignment: .top)
                 .foregroundColor(Colors.Blackish)
                 .font(Font.custom(Fonts.Regular, size: 15))
-                .padding(EdgeInsets(top: 4, leading: 30, bottom: 4, trailing: 30))
+                .padding(EdgeInsets(top: 4, leading: 30, bottom: 14, trailing: 30))
                 .multilineTextAlignment(.center)
             VStack{
                 HStack{
@@ -60,8 +60,10 @@ struct ScannerResultView: View {
                 HStack(spacing:24){
                     if self.showBrowseButton{
                         Image(systemName: "safari")
-                            .imageScale(.large)
-                            .foregroundColor(.white)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 26, height: 26)
+                            .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))                            .foregroundColor(.white)
                             .onTapGesture {
                                 print("Browse button was tapped")
                                 if let url = URL(string: self.scannedObject.data){
@@ -71,16 +73,20 @@ struct ScannerResultView: View {
                     }
                     
                     Image(systemName: "square.and.arrow.up")
-                        .imageScale(.large)
-                        .foregroundColor(.white)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 26, height: 26)
+                        .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))                        .foregroundColor(.white)
                         .onTapGesture {
                             print("Share button was tapped")
                             showShareSheet = true
-                            //self.scannedObject.data.actionSheet()
                     }
                     
                     Image(systemName: "doc.on.doc")
-                        .imageScale(.large)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 26, height: 26)
+                        .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
                         .foregroundColor(.white)
                         .onTapGesture {
                             let pasteboard = UIPasteboard.general
@@ -89,7 +95,7 @@ struct ScannerResultView: View {
                             self.showingAlert = true
                     }
                     
-                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             }.background(Colors.Main)
                 .cornerRadius(20)
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))

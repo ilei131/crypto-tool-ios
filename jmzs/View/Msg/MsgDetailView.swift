@@ -18,6 +18,7 @@ struct MsgDetailView: View {
     @State private var message = ""
     @State private var tipContent = ""
     @State var editMode = false
+    @State private var showShareSheet = false
 
     var body: some View {
         ZStack {
@@ -64,12 +65,9 @@ struct MsgDetailView: View {
                   message: Text(tipContent),
                   dismissButton: .default(Text("ok".localized())))
         }
-//        .sheet(isPresented: $showSheet) {
-//            return NavigationView {
-//                MsgCipherTextView(cipherText: model.message)
-//                    .navigationBarTitle(Text("ciphertext".localized()), displayMode: .inline)
-//            }
-//        }
+        .sheet(isPresented: self.$showShareSheet) {
+            ShareSheet(photo: UIImage(data:Data.init(base64Encoded: message)!)!)
+        }
         .toast(isPresenting: $isPresentingToast,
                message: "copy".localized(),
                icon: .success,
@@ -87,6 +85,10 @@ struct MsgDetailView: View {
                             Image(uiImage: UIImage(data:imageData)!)
                                 .renderingMode(.original)
                                 .resizable().aspectRatio(contentMode: .fit)
+                                .onTapGesture {
+                                    hideKeyboard()
+                                    self.showShareSheet = true
+                                }
                             Spacer()
                         }
                         Spacer()
