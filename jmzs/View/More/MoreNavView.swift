@@ -32,7 +32,7 @@ struct MoreNavView: View {
                             MoreCell(icon:"star", title: "score".localized(), color: "fbc344")
                         }
                         Button(action: {
-                            type = 1
+                            type = 4
                         }) {
                             MoreCell(icon:"lock.shield", title: "policy".localized(), color: "5366df")
                         }
@@ -106,6 +106,8 @@ struct MoreNavView: View {
                             createGenerateView
                         case 3:
                             TextShareSheet(text: "https://apps.apple.com/app/id6444359504")
+                        case 4:
+                            createPolicyView
                     default:
                         EmptyView()
                     }

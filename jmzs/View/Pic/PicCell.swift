@@ -16,27 +16,28 @@ struct PicCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
-                ZStack(alignment: .center) {
-                    Image(systemName: "photo")
-                        .font(.system(size: 20, weight: .regular))
-                        .padding(12)
-                        .foregroundColor(Color(hexadecimal: "5366df"))
-                        .background(Circle().fill(Color(hexadecimal: "F1F1F1")))
-                }
-                Spacer()
                 Text("\(item.pics?.count ?? 0)")
                     .font(.title)
                     .bold()
-                    .foregroundColor(Color("titleColor"))
+                    .lineLimit(1)
+                    .foregroundColor(Color("AccentColor"))
+                Spacer()
+                VStack() {
+                    Image(systemName: "photo")
+                        .font(.system(size: 24, weight: .regular))
+                        .foregroundColor(Color(hexadecimal: "5366df"))
+                }
             }
             Text(item.title ?? "")
                 .bold()
                 .lineLimit(1)
                 .foregroundColor(Color(hexadecimal: "8a8a8a"))
+                .padding(.top, 1)
         }
         .padding()
-        .background(Color(.secondarySystemGroupedBackground).brightness(0))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .background(.white)
+        .cornerRadius(10)
+        .shadow(radius: 1)
         .overlay(DeleteButton(onDelete: removeRows), alignment:.topTrailing)
         .alert(isPresented: $showAlert) {
             Alert(title: Text("tip".localized()),
@@ -75,7 +76,7 @@ struct DeleteButton: View {
                     self.onDelete()
                 }) {
                     Image(systemName: "xmark.circle.fill")
-                        .accentColor(Color(UIColor(named: "AccentColor")!))
+                        .accentColor(Color("AccentColor"))
                         .imageScale(.large)
                 }
                 .offset(x: 10, y: -10)
