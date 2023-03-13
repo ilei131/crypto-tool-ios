@@ -35,7 +35,7 @@ struct PicCell: View {
                 .padding(.top, 1)
         }
         .padding()
-        .background(.white)
+        .background(Color(.secondarySystemGroupedBackground).brightness(0))
         .cornerRadius(10)
         .shadow(radius: 1)
         .overlay(DeleteButton(onDelete: removeRows), alignment:.topTrailing)

@@ -129,7 +129,7 @@ struct MoreNavView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(CGSize(width: 150, height: 150))
-                Text("Version 1.1")
+                Text("Version 1.2")
                     .font(.system(size: 16))
             }
             Spacer()
