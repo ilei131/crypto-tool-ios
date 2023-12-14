@@ -27,6 +27,9 @@ class PicEntity: ObservableObject {
                     self.pics.append(p)
                 }
             }
+//            self.pics.sort(by: {
+//                $0.name > $1.name
+//            })
         }
     }
     @Published var title = ""

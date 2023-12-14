@@ -7,6 +7,7 @@
 */
 "main_title" = "Crypto Helper";
 "new_item" = "New Item";
+"new folder" = "New Folder";
 "item_info" = "Item Info";
 "title" = "Title*";
 "title_placeholder" = "Title";
@@ -98,3 +99,6 @@
 "alert.title.success" = "Success";
 "alert.title.info" = "Info";
 "alert.msg.copy.success" = "Text copied to clipboard!";
+"file" = "File";
+"items" = "items";
+"item" = "item";

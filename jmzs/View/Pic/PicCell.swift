@@ -14,30 +14,34 @@ struct PicCell: View {
     @State private var showAlert = false
 
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack(alignment: .center) {
-                Text("\(item.pics?.count ?? 0)")
-                    .font(.title)
-                    .bold()
-                    .lineLimit(1)
-                    .foregroundColor(Color("AccentColor"))
-                Spacer()
-                VStack() {
-                    Image(systemName: "photo")
-                        .font(.system(size: 24, weight: .regular))
-                        .foregroundColor(Color(hexadecimal: "5366df"))
-                }
-            }
+        VStack(alignment: .center) {
+            Image("folder_blue").resizable().scaledToFit()
+//            HStack(alignment: .center) {
+//                Text("\(item.pics?.count ?? 0)")
+//                    .font(.title)
+//                    .bold()
+//                    .lineLimit(1)
+//                    .foregroundColor(Color("AccentColor"))
+//                Spacer()
+//                VStack() {
+//                    Image(systemName: "photo")
+//                        .font(.system(size: 24, weight: .regular))
+//                        .foregroundColor(Color(hexadecimal: "5366df"))
+//                }
+//            }
             Text(item.title ?? "")
-                .bold()
+                .font(.system(size: 15))
+                .lineLimit(1)
+                .foregroundColor(Color("titleColor"))
+                .padding(.top, 1)
+            Text(itemFormateString(count: item.pics?.count ?? 0))
+                .font(.system(size: 12))
                 .lineLimit(1)
                 .foregroundColor(Color(hexadecimal: "8a8a8a"))
-                .padding(.top, 1)
         }
         .padding()
-        .background(Color(.secondarySystemGroupedBackground).brightness(0))
-        .cornerRadius(10)
-        .shadow(radius: 1)
+//        .cornerRadius(6)
+//        .shadow(radius: 0.2)
         .overlay(DeleteButton(onDelete: removeRows), alignment:.topTrailing)
         .alert(isPresented: $showAlert) {
             Alert(title: Text("tip".localized()),
@@ -63,6 +67,13 @@ struct PicCell: View {
             context.quickSave()
         }
     }
+    
+    func itemFormateString(count: Int) -> String {
+        if (count == 1) {
+            return "\(count) \("item".localized())"
+        }
+        return "\(count) \("items".localized())"
+    }
 }
 
 struct DeleteButton: View {
@@ -79,7 +90,6 @@ struct DeleteButton: View {
                         .accentColor(Color("AccentColor"))
                         .imageScale(.large)
                 }
-                .offset(x: 10, y: -10)
             }
         }
     }

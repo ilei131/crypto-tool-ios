@@ -7,6 +7,7 @@
 */
 "main_title" = "加密助手";
 "new_item" = "新条目";
+"new folder" = "新建文件夹";
 "item_info" = "条目信息";
 "title" = "标题*";
 "title_placeholder" = "标题";
@@ -99,3 +100,6 @@
 "alert.title.success" = "操作成功";
 "alert.title.info" = "提示";
 "alert.msg.copy.success" = "文本已复制到剪贴板！";
+"file" = "文件";
+"items" = "项";
+"item" = "项";

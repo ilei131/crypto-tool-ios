@@ -22,7 +22,7 @@ struct PicListView: View {
         ], predicate:nil)
     }
     
-    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    private let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
         if fetchRequest.wrappedValue.count > 0 {
@@ -41,9 +41,8 @@ struct PicListView: View {
                     }
                     .onDelete(perform: self.removeItem)
                 }
-                .padding(EdgeInsets(top: 20, leading: 20, bottom: 10, trailing: 20))
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
             }
-            .background(Color(.systemGroupedBackground))
         } else {
             EmptyTipView()
         }

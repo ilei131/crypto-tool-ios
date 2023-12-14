@@ -201,6 +201,33 @@ class DataManager: ObservableObject {
         viewContext.quickSave()
     }
     
+    
+    func updateCurrentPic(){
+        guard let item = updatePic else { return }
+        updatePic(item)
+        detachPic()
+    }
+    
+    func updatePic(_ store: PicEntity) {
+        guard let data = store.store else { return }
+        data.id = UUID()
+        data.createTime = store.createTime
+        data.title = store.title
+        data.updateTime = store.updateTime
+        if let set = data.pics { //清空图片
+            data.removeFromPics(set)
+        }
+    
+        for pic in store.pics {
+            let p = Thumb(context: viewContext)
+            p.data = pic.data
+            p.id = pic.id
+            p.path = pic.path
+            data.addToPics(p)
+        }
+        viewContext.quickSave()
+    }
+    
     func addPic(_ store: PicEntity) {
         let data = Pic(context: viewContext)
         data.id = UUID()
