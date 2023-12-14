@@ -70,7 +70,7 @@ struct ImagePicker: UIViewControllerRepresentable {
             } else {
                 if let uiImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                     if let onSelectAction = onSelect {
-                        if let data = uiImage.jpegData(compressionQuality: 0.5) {
+                        if let data = uiImage.jpegData(compressionQuality: 1) {
                             onSelectAction(data)
                         }
                     }
